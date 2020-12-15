@@ -1,5 +1,5 @@
 <!--using #contactForm as local template variable to access ngForm.
-we are using event binding to bind ngSubmit to on Submit method-->
+we are using event binding(event binding symbol ()) to bind ngSubmit to on Submit method-->
 <form #contactForm="ngForm" (ngSubmit)="onSubmit()">
   <!--we bind formControl to input using ngModule
   we can get formcontrol access by assigning ngModel to local variable-->
@@ -12,7 +12,7 @@ we are using event binding to bind ngSubmit to on Submit method-->
   <pre>valid    : {{fname.valid}} </pre>
   <pre>invalid  : {{fname.invalid}} </pre>
   <pre>touched  : {{fname.touched}} </pre> -->
-
+  <!--here [()] it is two-way data binding-->
   <p>
     <label for="lastname">Last Name</label>
     <input type="text" id="lastname" name="lastname" [(ngModel)]="contact.lastname">
