@@ -1,5 +1,11 @@
 <div class="container">
-    <li><a [routerLink]="['admin-center']">Admin Center</a></li>
-    <li><a [routerLink]="['home/my-courses']">Courses Center</a></li>
+    <nav class="card navbar navbar-default">
+        <ul class="nav navbar-nav">
+            <button [routerLink]="['admin-center']" pButton pRipple type="button" label="Admin Center"
+                class="p-button-rounded"></button>
+            <button [routerLink]="['home/my-courses']" pButton pRipple type="button" label="Courses Center"
+                class="p-button-rounded"></button>
+        </ul>
+    </nav>
     <router-outlet></router-outlet>
 </div>

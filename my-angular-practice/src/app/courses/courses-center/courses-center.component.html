@@ -1,11 +1,14 @@
 <div class="container">
-    <nav class="navbar navbar-default">
+    <nav class="card navbar navbar-default">
         <ul class="nav navbar-nav">
-            <li><a [routerLink]="['learning']">All courses</a></li>
-            <li><a [routerLink]="['collections']">Collections</a></li>
-            <li><a [routerLink]="['wishlist']"> Wishlist</a></li>
-            <li><a [routerLink]="['archived']">Archived</a></li>
-
+            <button [routerLink]="['learning']" pButton pRipple type="button" label="All Courses"
+                class="p-button-rounded"></button>
+            <button [routerLink]="['collections']" pButton pRipple type="button" label="Collections"
+                class="p-button-rounded"></button>
+            <button [routerLink]="['wishlist']" pButton pRipple type="button" label="Wishlist"
+                class="p-button-rounded"></button>
+            <button [routerLink]="['archived']" pButton pRipple type="button" label="Archived"
+                class="p-button-rounded"></button>
         </ul>
     </nav>
     <router-outlet></router-outlet>

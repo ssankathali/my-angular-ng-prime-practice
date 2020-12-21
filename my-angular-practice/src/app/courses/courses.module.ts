@@ -8,12 +8,14 @@ import { WishListComponent } from './wish-list/wish-list.component';
 import { ArchivedComponent } from './archived/archived.component';
 import { CoursesCenterComponent } from './courses-center/courses-center.component';
 
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
   declarations: [AllCoursesComponent, CollectionsComponent, WishListComponent, ArchivedComponent, CoursesCenterComponent],
   imports: [
     CommonModule,
-    CoursesRoutingModule
+    CoursesRoutingModule,
+    ButtonModule
   ]
 })
 export class CoursesModule { }
