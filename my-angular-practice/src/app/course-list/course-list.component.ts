@@ -7,9 +7,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CourseListComponent implements OnInit {
 
+  products = [
+    {
+      name: "MacBook",
+      description: "My macbook"
+    },
+    {
+      name: "HP",
+      description: "My HP"
+    },
+    {
+      name: "HP",
+      description: "My HP"
+    },
+  ];
   constructor() { }
 
   ngOnInit(): void {
   }
 
 }
+
+// class products {
+//   name: string;
+//   description: string;
+// }

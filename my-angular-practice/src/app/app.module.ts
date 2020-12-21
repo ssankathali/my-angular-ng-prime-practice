@@ -5,7 +5,8 @@ import { AppComponent } from './app.component';
 import { InputTextModule } from 'primeng/inputtext';
 import { from } from 'rxjs';
 import { CourseListComponent } from './course-list/course-list.component';
-
+import { CardModule } from 'primeng/card';
+import { ButtonModule } from 'primeng/button';
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +15,9 @@ import { CourseListComponent } from './course-list/course-list.component';
   imports: [
     BrowserModule,
     InputTextModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CardModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
