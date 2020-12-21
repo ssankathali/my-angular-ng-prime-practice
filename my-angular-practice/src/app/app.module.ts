@@ -11,6 +11,7 @@ import { AllCoursesComponent } from './all-courses/all-courses.component';
 import { CollectionsComponent } from './collections/collections.component';
 import { WishListComponent } from './wish-list/wish-list.component';
 import { ArchivedComponent } from './archived/archived.component';
+import { AdminCenterComponent } from './admin-center/admin-center.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,8 @@ import { ArchivedComponent } from './archived/archived.component';
     AllCoursesComponent,
     CollectionsComponent,
     WishListComponent,
-    ArchivedComponent
+    ArchivedComponent,
+    AdminCenterComponent
   ],
   imports: [
     BrowserModule,
