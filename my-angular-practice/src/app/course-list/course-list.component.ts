@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CourseListComponent implements OnInit {
 
-  products = [
+  courses = [
     {
       name: "MacBook",
       description: "My macbook"

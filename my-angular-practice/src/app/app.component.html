@@ -1,2 +1,11 @@
-<h1>My Angular Project Application</h1>
-<router-outlet></router-outlet>
+<div class="container">
+    <nav class="navbar navbar-default">
+        <ul class="nav navbar-nav">
+            <li><a [routerLink]="['home/my-courses/learning']">All courses</a></li>
+            <li><a [routerLink]="['home/my-courses/collections']">Collections</a></li>
+            <li><a [routerLink]="['home/my-courses/wishlist']"> Wishlist</a></li>
+            <li><a [routerLink]="['home/my-courses/archived']">Archived</a></li>
+        </ul>
+    </nav>
+    <router-outlet></router-outlet>
+</div>
