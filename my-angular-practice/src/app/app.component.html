@@ -1,12 +1,5 @@
 <div class="container">
-    <nav class="navbar navbar-default">
-        <ul class="nav navbar-nav">
-            <li><a [routerLink]="['home/my-courses/learning']">All courses</a></li>
-            <li><a [routerLink]="['home/my-courses/collections']">Collections</a></li>
-            <li><a [routerLink]="['home/my-courses/wishlist']"> Wishlist</a></li>
-            <li><a [routerLink]="['home/my-courses/archived']">Archived</a></li>
-            <li><a [routerLink]="['admin-center']">Admin Center</a></li>
-        </ul>
-    </nav>
+    <li><a [routerLink]="['admin-center']">Admin Center</a></li>
+    <li><a [routerLink]="['home/my-courses']">Courses Center</a></li>
     <router-outlet></router-outlet>
 </div>
