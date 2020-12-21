@@ -10,8 +10,8 @@ import { ButtonModule } from 'primeng/button';
 import { AllCoursesComponent } from './all-courses/all-courses.component';
 import { CollectionsComponent } from './collections/collections.component';
 import { WishListComponent } from './wish-list/wish-list.component';
-import { ArchivedComponent } from './archived/archived.component';
-import { AdminCenterComponent } from './admin-center/admin-center.component';
+import { ArchivedComponent } from './archived/archived.component'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,15 +19,14 @@ import { AdminCenterComponent } from './admin-center/admin-center.component';
     AllCoursesComponent,
     CollectionsComponent,
     WishListComponent,
-    ArchivedComponent,
-    AdminCenterComponent
+    ArchivedComponent
   ],
   imports: [
     BrowserModule,
     InputTextModule,
     AppRoutingModule,
     CardModule,
-    ButtonModule
+    ButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

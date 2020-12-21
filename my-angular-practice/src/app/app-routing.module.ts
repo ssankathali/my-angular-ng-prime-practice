@@ -1,11 +1,9 @@
 import { NgModule } from '@angular/core';
 
 import { RouterModule, Routes } from '@angular/router';
-import { AdminCenterComponent } from './admin-center/admin-center.component';
 import { AllCoursesComponent } from './all-courses/all-courses.component';
 import { ArchivedComponent } from './archived/archived.component';
 import { CollectionsComponent } from './collections/collections.component';
-import { CourseListComponent } from './course-list/course-list.component';
 import { WishListComponent } from './wish-list/wish-list.component';
 
 
@@ -15,7 +13,7 @@ const routes: Routes = [
     },
     {
         path: 'admin-center',
-        component: AdminCenterComponent,
+        loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule),
     },
     {
         path: 'home/my-courses',
