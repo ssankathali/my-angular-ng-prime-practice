@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { Course } from '../course';
 import { CoursesService } from '../courses.service';
 
@@ -9,19 +9,12 @@ import { CoursesService } from '../courses.service';
   styleUrls: ['./all-courses.component.scss']
 })
 export class AllCoursesComponent implements OnInit {
-  courses = [
-  ];
-  subscription: Subscription;
+  courses$: Observable<Course[]>;
+
   constructor(private coursesService: CoursesService) { }
 
   ngOnInit(): void {
-    this.subscription = this.coursesService.getCourses().subscribe((res: Course[]) => {
-      this.courses = res;
-    });
-  }
-
-  ngOnDestroy() {
-    this.subscription.unsubscribe();
+    this.courses$ = this.coursesService.getCourses();
   }
 
 }

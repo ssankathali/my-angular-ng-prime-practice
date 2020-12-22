@@ -1,5 +1,7 @@
-<p-card [header]="course.name" [style]="{'width': '25rem', 'margin-bottom': '2em'}" *ngFor="let course of courses">
-    <p>
-        {{course.description}}
-    </p>
-</p-card>
+<div *ngFor="let course of courses$ | async">
+    <p-card [header]="course.name" [style]="{'width': '25rem', 'margin-bottom': '2em'}">
+        <p>
+            {{course.description}}
+        </p>
+    </p-card>
+</div>
