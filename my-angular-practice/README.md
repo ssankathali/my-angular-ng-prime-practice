@@ -31,3 +31,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 1.To generate a module -ng generate module modulename --routing
 2.To generate component in module - ng generate c modulename/component name
+3. to install in-memory web api-npm install angular-in-memory-web-api --save
+4.to generate a service - ng generate service InMemoryData
