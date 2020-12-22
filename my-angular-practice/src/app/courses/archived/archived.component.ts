@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Course } from '../course';
+import { CoursesService } from '../courses.service';
 
 @Component({
   selector: 'app-archived',
@@ -6,10 +9,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./archived.component.scss']
 })
 export class ArchivedComponent implements OnInit {
+  courses$: Observable<Course[]>;
+  constructor(private coursesService: CoursesService) { }
 
-  constructor() { }
 
   ngOnInit(): void {
+    this.courses$ = this.coursesService.getArchived();
   }
 
 }

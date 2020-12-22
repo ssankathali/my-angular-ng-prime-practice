@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Course } from '../course';
+import { CoursesService } from '../courses.service';
 
 @Component({
   selector: 'app-wish-list',
@@ -6,10 +9,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./wish-list.component.scss']
 })
 export class WishListComponent implements OnInit {
-
-  constructor() { }
+  courses$: Observable<Course[]>;
+  constructor(private coursesService: CoursesService) { }
 
   ngOnInit(): void {
+    this.courses$ = this.coursesService.getWishlist();
   }
 
 }
