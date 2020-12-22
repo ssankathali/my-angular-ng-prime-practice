@@ -12,7 +12,12 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 12, name: 'Narco', description: 'dsfasd' },
       { id: 13, name: 'Bombasto', description: 'dsfasd' }
     ];
-    return { courses };
+    const collections = [
+      { id: 11, name: 'Dr Nice Collection', description: 'dsfasd' },
+      { id: 12, name: 'Narco Collection', description: 'dsfasd' },
+      { id: 13, name: 'Bombasto Collection', description: 'dsfasd' }
+    ];
+    return { courses, collections };
   }
   // Overrides the genId method to ensure that a course always has an id.
   // If the courses array is empty,

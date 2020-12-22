@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Course } from '../course';
+import { CoursesService } from '../courses.service';
 
 @Component({
   selector: 'app-collections',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CollectionsComponent implements OnInit {
 
-  constructor() { }
+  courses$: Observable<Course[]>;
+
+  constructor(private coursesService: CoursesService) { }
 
   ngOnInit(): void {
+    this.courses$ = this.coursesService.getCollections();
   }
 
 }
