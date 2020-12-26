@@ -31,4 +31,10 @@ export class CoursesService {
   getArchived(): Observable<Course[]> {
     return this.http.get<Course[]>(this.archivedUrl)
   }
+
+  /** GET course by id. Will 404 if id not found */
+  getCourse(id: number): Observable<Course> {
+    const url = `${this.coursesUrl}/${id}`;;
+    return this.http.get<Course>(url);
+  }
 }

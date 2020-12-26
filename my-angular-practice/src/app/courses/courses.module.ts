@@ -10,9 +10,10 @@ import { CoursesCenterComponent } from './courses-center/courses-center.componen
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import { CourseCardComponent } from './course-card/course-card.component';
+import { CourseDetailComponent } from './course-detail/course-detail.component';
 
 @NgModule({
-  declarations: [AllCoursesComponent, CollectionsComponent, WishListComponent, ArchivedComponent, CoursesCenterComponent, CourseCardComponent],
+  declarations: [AllCoursesComponent, CollectionsComponent, WishListComponent, ArchivedComponent, CoursesCenterComponent, CourseCardComponent, CourseDetailComponent],
   imports: [
     CommonModule,
     CoursesRoutingModule,
