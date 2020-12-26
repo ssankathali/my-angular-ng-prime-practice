@@ -2,5 +2,7 @@
     <p>
         {{course.description}}
     </p>
-    <button [routerLink]="[course.id]">View Details</button>
+
+    <button pButton pRipple type="button" label="View Details" class="p-button-raised p-button-text"
+        [routerLink]="[course.id]"></button>
 </p-card>

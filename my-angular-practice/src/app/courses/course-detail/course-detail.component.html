@@ -1,1 +1,9 @@
-<p>course-detail works!</p>
+<div *ngIf="courseDetails$| async as course">
+    <p-card>
+        <div>
+            <P>{{course.name}}</P>
+            <p>{{course.description}}</p>
+        </div>
+    </p-card>
+
+</div>

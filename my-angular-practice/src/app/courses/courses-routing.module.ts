@@ -4,6 +4,7 @@ import { AllCoursesService } from './all-courses.service';
 import { AllCoursesComponent } from './all-courses/all-courses.component';
 import { ArchivedComponent } from './archived/archived.component';
 import { CollectionsComponent } from './collections/collections.component';
+import { CourseDetailService } from './course-detail.service';
 import { CourseDetailComponent } from './course-detail/course-detail.component';
 import { CoursesCenterComponent } from './courses-center/courses-center.component';
 import { WishListComponent } from './wish-list/wish-list.component';
@@ -21,7 +22,8 @@ const routes: Routes = [
       },
       {
         path: 'learning/:id',
-        component: CourseDetailComponent
+        component: CourseDetailComponent,
+        resolve: { 'course-detail': CourseDetailService }
       },
       {
         path: 'collections',

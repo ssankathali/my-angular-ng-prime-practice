@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { CoursesService } from '../courses.service';
+import { ActivatedRoute } from '@angular/router';
+import { Observable, of } from 'rxjs';
+import { Course } from '../course';
+
 
 @Component({
   selector: 'app-course-detail',
@@ -7,10 +10,12 @@ import { CoursesService } from '../courses.service';
   styleUrls: ['./course-detail.component.scss']
 })
 export class CourseDetailComponent implements OnInit {
+  courseDetails$: Observable<Course>;
 
-  constructor(private courseService: CoursesService) { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.courseDetails$ = of(this.route.snapshot.data['course-detail']);
   }
 
 }
