@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Resolve, Routes, RouterModule } from '@angular/router';
+import { AllCoursesService } from './all-courses.service';
 import { AllCoursesComponent } from './all-courses/all-courses.component';
 import { ArchivedComponent } from './archived/archived.component';
 import { CollectionsComponent } from './collections/collections.component';
@@ -14,7 +15,8 @@ const routes: Routes = [
     children: [
       {
         path: 'learning',
-        component: AllCoursesComponent
+        component: AllCoursesComponent,
+        resolve: { learning: AllCoursesService }
       },
       {
         path: 'collections',

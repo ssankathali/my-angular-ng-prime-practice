@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, Subscription } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
+import { Observable, of } from 'rxjs';
 import { Course } from '../course';
-import { CoursesService } from '../courses.service';
+import { delay, map } from 'rxjs/internal/operators';
 
 @Component({
   selector: 'app-all-courses',
@@ -11,10 +12,10 @@ import { CoursesService } from '../courses.service';
 export class AllCoursesComponent implements OnInit {
   courses$: Observable<Course[]>;
 
-  constructor(private coursesService: CoursesService) { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.courses$ = this.coursesService.getCourses();
+    this.courses$ = of(this.route.snapshot.data['learning']);
   }
 
 }

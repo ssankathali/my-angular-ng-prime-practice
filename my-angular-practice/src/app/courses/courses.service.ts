@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { delay } from 'rxjs/internal/operators';
 import { Course } from './course';
 
 @Injectable({
@@ -15,7 +16,7 @@ export class CoursesService {
 
   /** GET heroes from the server */
   getCourses(): Observable<Course[]> {
-    return this.http.get<Course[]>(this.coursesUrl)
+    return this.http.get<Course[]>(this.coursesUrl);
   }
 
   /** GET heroes from the server */
