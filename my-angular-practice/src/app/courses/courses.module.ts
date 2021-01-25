@@ -11,9 +11,10 @@ import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import { CourseCardComponent } from './course-card/course-card.component';
 import { CourseDetailComponent } from './course-detail/course-detail.component';
+import { CurrencyConverterPipe } from './currency-converter.pipe';
 
 @NgModule({
-  declarations: [AllCoursesComponent, CollectionsComponent, WishListComponent, ArchivedComponent, CoursesCenterComponent, CourseCardComponent, CourseDetailComponent],
+  declarations: [AllCoursesComponent, CollectionsComponent, WishListComponent, ArchivedComponent, CoursesCenterComponent, CourseCardComponent, CourseDetailComponent, CurrencyConverterPipe],
   imports: [
     CommonModule,
     CoursesRoutingModule,

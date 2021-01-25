@@ -37,4 +37,8 @@ export class CoursesService {
     const url = `${this.coursesUrl}/${id}`;;
     return this.http.get<Course>(url);
   }
+
+  addCourse(course: Course) {
+
+  }
 }

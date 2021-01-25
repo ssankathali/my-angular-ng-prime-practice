@@ -2,7 +2,27 @@
     <p>
         {{course.description}}
     </p>
+    <p>
+        Price: {{course.price}}
+    </p>
+    <div class="card-body">
 
+        <div class="row">
+            <h3>Doller to Rupee </h3>
+        </div>
+        <div class="row">
+            <p> Doller : <input type="text" [(ngModel)]="Doller" />
+                Rupee : {{Doller | currencyConverter:'Rupee'}} </p>
+        </div>
+
+        <div class="row">
+            <h3>Celsius to Fahrenheit </h3>
+        </div>
+        <div class="row">
+            <p> celsius : <input type="text" [(ngModel)]="celcius" />
+                Fahrenheit : {{celcius | tempConverter:'F'}} </p>
+        </div>
+    </div>
     <button pButton pRipple type="button" label="View Details" class="p-button-raised p-button-text"
         [routerLink]="[course.id]"></button>
 </p-card>

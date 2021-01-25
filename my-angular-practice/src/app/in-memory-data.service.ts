@@ -8,26 +8,26 @@ import { Course } from './courses/course';
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const courses = [
-      { id: 11, name: 'Dr Nice', description: 'dsfasd' },
-      { id: 12, name: 'Narco', description: 'dsfasd' },
-      { id: 13, name: 'Bombasto', description: 'dsfasd' }
+      { id: 11, name: 'Dr Nice', description: 'dsfasd', price: 50 },
+      { id: 12, name: 'Narco', description: 'dsfasd', price: 50 },
+      { id: 13, name: 'Bombasto', description: 'dsfasd', price: 50 }
     ];
     const collections = [
-      { id: 11, name: 'Dr Nice Collection', description: 'dsfasd' },
-      { id: 12, name: 'Narco Collection', description: 'dsfasd' },
-      { id: 13, name: 'Bombasto Collection', description: 'dsfasd' }
+      { id: 11, name: 'Dr Nice Collection', description: 'dsfasd', price: 50 },
+      { id: 12, name: 'Narco Collection', description: 'dsfasd', price: 50 },
+      { id: 13, name: 'Bombasto Collection', description: 'dsfasd', price: 50 }
     ];
 
     const wishlist = [
-      { id: 11, name: 'Dr Nice Wishlist', description: 'dsfasd' },
-      { id: 12, name: 'Narco Wishlist', description: 'dsfasd' },
-      { id: 13, name: 'Bombasto Wishlist', description: 'dsfasd' }
+      { id: 11, name: 'Dr Nice Wishlist', description: 'dsfasd', price: 50 },
+      { id: 12, name: 'Narco Wishlist', description: 'dsfasd', price: 50 },
+      { id: 13, name: 'Bombasto Wishlist', description: 'dsfasd', price: 50 }
     ];
 
     const archived = [
-      { id: 11, name: 'Dr Nice Archived', description: 'dsfasd' },
-      { id: 12, name: 'Narco Archived', description: 'dsfasd' },
-      { id: 13, name: 'Bombasto Archived', description: 'dsfasd' }
+      { id: 11, name: 'Dr Nice Archived', description: 'dsfasd', price: 50 },
+      { id: 12, name: 'Narco Archived', description: 'dsfasd', price: 50 },
+      { id: 13, name: 'Bombasto Archived', description: 'dsfasd', price: 50 }
     ];
     return { courses, collections, wishlist, archived };
   }
